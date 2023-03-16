@@ -115,36 +115,39 @@ child: Column(
                   fontWeight: FontWeight.bold,
                   // TODO : palette의 textcolor1
                   color: Palette.textColor1,
-                ),
+                ),// TODO : isSigunupScreen이 false일 때만 밑줄이 생기도록
+
           ),
-                Container(
+                isSignupScreen ? SizedBox()
+      :
+      Container(
 // TODO : margin top만 3, height 2, width 55, color green
                   margin: EdgeInsets.only(top: 3),
                   height: 2,
                   width: 55,
                   color: Colors.green,
-)],),),
+)
+            ],),),
     GestureDetector(
       child: Column(
         children: [
           Text(
             'SIGNUP',
-            //TODO : font size 16, bold
-            //TODO : palette의 active colo
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
-              // TODO : palette의 textcolor1
               color: Palette.activeColor,
             ),
           ),
+          // TODO : isSigunupScreen이 true일 때만 밑줄이 생기도록
+          isSignupScreen ?
           Container(
-              // TODO : margin top만 3, height 2, width 55, color gree
             margin: EdgeInsets.only(top: 3),
             height: 2,
             width: 55,
             color: Colors.green,
-    )],))],),
+    ) : SizedBox(),
+        ],))],),
 Container(
     child: Form(
       child: Column(
