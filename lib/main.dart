@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:eos_chatting/screens/main_screen.dart';
 
 void main() {
-  runApp
-    (const MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: LoginSignUpScreen()
-      // TODO : 알맞은 위젯 채우기
-    );
+        // TODO : 알맞은 위젯 채우기
+        );
   }
 }
