@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../config/palette.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:eos_chatting/firebase_options.dart';
 
 class LoginSignUpScreen extends StatefulWidget {
   const LoginSignUpScreen({Key? key}) : super(key: key);

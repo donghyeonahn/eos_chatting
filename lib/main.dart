@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:eos_chatting/screens/main_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:eos_chatting/firebase_options.dart';
+import 'package:eos_chatting/screens/chat_screen.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(
+      const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: ChatScreen(),
+      )
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +27,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: LoginSignUpScreen()
+        home: ChatScreen(),
         // TODO : 알맞은 위젯 채우기
         );
   }
