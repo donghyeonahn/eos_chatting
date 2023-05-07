@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
         title: 'Chatting App',
         theme: ThemeData(
           primarySwatch: Colors.blue,
+          fontFamily: 'Teko'
         ),
         home: ChatScreen(),
         // TODO : 알맞은 위젯 채우기
