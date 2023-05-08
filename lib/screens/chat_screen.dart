@@ -30,7 +30,7 @@ class _ChatScreenState extends State<ChatScreen> {
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.arrow_forward),
+            icon: Icon(Icons.exit_to_app_rounded),
             onPressed: () {
               // 버튼이 눌렸을 때 실행할 코드
             },
